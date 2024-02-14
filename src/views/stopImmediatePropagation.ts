@@ -1,29 +1,29 @@
 const withCodeBlock = `
 button.addEventListener("click", () => {
-    displayToast("FIRST CALLBACK");
+    displayToast("FIRST");
 });
   
 button.addEventListener("click", (e) => {
     e.stopImmediatePropagation();
-    displayToast("SECOND CALLBACK");
+    displayToast("SECOND");
 });
   
 button.addEventListener("click", () => {
     // This should not be displayed
-    displayToast("THIRD CALLBACK");
+    displayToast("THIRD");
 });`
 
 const withoutCodeBlock = `
 button.addEventListener("click", () => {
-    displayToast("FIRST CALLBACK");
+    displayToast("FIRST");
 });
   
 button.addEventListener("click", () => {
-    displayToast("SECOND CALLBACK");
+    displayToast("SECOND");
 });
   
 button.addEventListener("click", () => {
-    displayToast("THIRD CALLBACK");
+    displayToast("THIRD");
 });`
 
 export const stopImmediatePropagationTemplate = `
