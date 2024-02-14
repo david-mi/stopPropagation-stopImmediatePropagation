@@ -1,5 +1,5 @@
-const withCodeBlock = `
-button.addEventListener("click", () => {
+const withCodeBlock =
+    `button.addEventListener("click", () => {
     displayToast("FIRST");
 });
   
@@ -13,8 +13,8 @@ button.addEventListener("click", () => {
     displayToast("THIRD");
 });`
 
-const withoutCodeBlock = `
-button.addEventListener("click", () => {
+const withoutCodeBlock =
+    `button.addEventListener("click", () => {
     displayToast("FIRST");
 });
   

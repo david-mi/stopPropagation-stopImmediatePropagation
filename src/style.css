@@ -113,8 +113,8 @@ h1 {
       flex: 1;
       border-radius: 10px;
       padding: clamp(0px, 4vw, 2rem);
-      max-width: 550px;
-      width: 100%;
+      display: flex;
+      justify-content: center;
     }
 
     & button {
