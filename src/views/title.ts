@@ -1,0 +1,1 @@
+export const titleTemplate = "<h1>stopPropagation / stopImmediatePropagation</h1>";
