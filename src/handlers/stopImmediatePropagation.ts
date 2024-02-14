@@ -6,11 +6,11 @@ export function setImmediatePropagationHandlers() {
 }
 
 function setWithButtonHandlers() {
-  const withButton = document.querySelector<HTMLButtonElement>("#stopImmediatePropagation .with",)!;
+  const withButton = document.querySelector<HTMLButtonElement>("#stopImmediatePropagation .with button",)!;
 
   withButton.addEventListener("click", () => {
     displayToast("FIRST CALLBACK");
-    });
+  });
 
   withButton.addEventListener("click", (event) => {
     event.stopImmediatePropagation();
@@ -24,7 +24,7 @@ function setWithButtonHandlers() {
 }
 
 function setWithoutButtonHandlers() {
-  const withoutButton = document.querySelector<HTMLButtonElement>("#stopImmediatePropagation .without",)!;
+  const withoutButton = document.querySelector<HTMLButtonElement>("#stopImmediatePropagation .without button",)!;
 
   withoutButton.addEventListener("click", () => {
     displayToast("FIRST CALLBACK");

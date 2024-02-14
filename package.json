@@ -13,7 +13,9 @@
     "vite": "^5.1.0"
   },
   "dependencies": {
+    "@types/prismjs": "^1.26.3",
     "@types/toastify-js": "^1.12.3",
+    "prismjs": "^1.29.0",
     "toastify-js": "^1.12.0"
   }
 }
