@@ -1,2 +1,7 @@
-export { setStopImmediatePropagationHandlers } from "./stopImmediatePropagation"
-export { setStopPropagationHandlers } from "./stopPropagation"
+import { setStopPropagationHandlers } from "./stopPropagation";
+import { setStopImmediatePropagationHandlers } from "./stopImmediatePropagation";
+
+export function setHandlers() {
+  setStopPropagationHandlers()
+  setStopImmediatePropagationHandlers()
+}

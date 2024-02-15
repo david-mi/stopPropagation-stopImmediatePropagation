@@ -1,7 +1,7 @@
-import { displayToast } from "../toast";
+import { displayToast } from "../../toast";
 
-export function setStopPropagationHandlers() {
-  const button = document.querySelector<HTMLButtonElement>("#stopPropagation .example-1 button",)!;
+export function setStopPropagationExample1Handlers(exampleNumber: number) {
+  const button = document.querySelector<HTMLButtonElement>(`#stopPropagation .example-${exampleNumber} button`,)!;
   const span = button.querySelector("span")!
 
   button.addEventListener("click", () => {

@@ -1,7 +1,7 @@
-import { displayToast } from "../toast";
+import { displayToast } from "../../toast";
 
-export function setStopImmediatePropagationHandlers() {
-  const button = document.querySelector<HTMLButtonElement>("#stopImmediatePropagation .example-1 button",)!;
+export function setStopImmediatePropagationExample1Handlers(exampleNumber: number) {
+  const button = document.querySelector<HTMLButtonElement>(`#stopImmediatePropagation .example-${exampleNumber} button`,)!;
   const span = button.querySelector("span")!
 
   button.addEventListener("click", () => {
@@ -14,7 +14,6 @@ export function setStopImmediatePropagationHandlers() {
   });
 
   button.addEventListener("click", () => {
-    // This should not be displayed
     displayToast("BUTTON 3");
   });
 
