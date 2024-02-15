@@ -14,7 +14,7 @@ export function getSectionLayout({ exampleNumber, htmlBlock, jsBlock, target }: 
 			<span>${target}()</span>
 		</h2>
 		<article class="example example-${exampleNumber}">
-				<h3>Example 1</h3>
+				<h3>Example ${exampleNumber}</h3>
 				<div class="pre-wrapper">
 					<div class="blocks">
 						<h4>Structure</h4>
