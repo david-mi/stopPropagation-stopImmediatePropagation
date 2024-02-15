@@ -1,11 +1,11 @@
 import "./style.css";
 import 'prismjs/themes/prism-tomorrow.css'
 import Prism from 'prismjs';
-import { layout } from "./views/layout";
+import { globalLayout } from "./views/globalLayout";
 import { setStopImmediatePropagationHandlers, setStopPropagationHandlers } from "./handlers";
 
 const rootElement = document.getElementById("app") as HTMLDivElement;
-rootElement.innerHTML = layout;
+rootElement.innerHTML = globalLayout;
 Prism.highlightAll()
 
 setStopImmediatePropagationHandlers();
