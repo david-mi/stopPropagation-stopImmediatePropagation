@@ -24,4 +24,7 @@ export function setStopImmediatePropagationExample2Handlers(exampleNumber: numbe
     event.stopImmediatePropagation();
     displayToast("SPAN 2")
   })
+  span.addEventListener("click", () => {
+    displayToast("SPAN 3")
+  })
 }

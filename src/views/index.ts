@@ -1,3 +1,3 @@
-export { stopImmediatePropagationSectionLayout } from "./stopImmediatePropagation"
-export { stopPropagationSectionLayout } from "./stopPropagation"
+export { stopImmediatePropagationSectionLayout } from "./stopImmediatePropagation/layout"
+export { stopPropagationSectionLayout } from "./stopPropagation/layout"
 export { titleTemplate } from "./title";

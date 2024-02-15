@@ -26,7 +26,6 @@ const htmlBlock =
 
 
 export const stopImmediatePropagationExample1 = getSectionLayout({
-  target: "stopImmediatePropagation",
   exampleNumber: 1,
   htmlBlock,
   jsBlock,

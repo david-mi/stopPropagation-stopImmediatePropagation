@@ -2,17 +2,10 @@ interface SectionLayoutProps {
 	exampleNumber: number
 	htmlBlock: string
 	jsBlock: string
-	target: "stopImmediatePropagation" | "stopPropagation"
 }
 
-export function getSectionLayout({ exampleNumber, htmlBlock, jsBlock, target }: SectionLayoutProps) {
+export function getSectionLayout({ exampleNumber, htmlBlock, jsBlock }: SectionLayoutProps) {
 	return `
-	<section id="${target}">
-		<h2>
-			<span>event</span>
-			<span>.</span>
-			<span>${target}()</span>
-		</h2>
 		<article class="example example-${exampleNumber}">
 				<h3>Example ${exampleNumber}</h3>
 				<div class="pre-wrapper">
@@ -33,6 +26,5 @@ export function getSectionLayout({ exampleNumber, htmlBlock, jsBlock, target }: 
 					Button
 					<span>Span</span>
 				</button>
-		</article>
-	</section>`;
+		</article>`;
 }
