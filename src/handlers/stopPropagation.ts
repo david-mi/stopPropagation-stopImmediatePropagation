@@ -1,7 +1,7 @@
 import { displayToast } from "../toast";
 
-export function setStopImmediatePropagationHandlers() {
-  const button = document.querySelector<HTMLButtonElement>("#stopImmediatePropagation .example-1 button",)!;
+export function setStopPropagationHandlers() {
+  const button = document.querySelector<HTMLButtonElement>("#stopPropagation .example-1 button",)!;
   const span = button.querySelector("span")!
 
   button.addEventListener("click", () => {
@@ -9,7 +9,7 @@ export function setStopImmediatePropagationHandlers() {
   });
 
   button.addEventListener("click", (event) => {
-    event.stopImmediatePropagation();
+    event.stopPropagation();
     displayToast("BUTTON 2");
   });
 

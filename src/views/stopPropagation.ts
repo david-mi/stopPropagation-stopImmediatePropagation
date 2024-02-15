@@ -1,27 +1,53 @@
-const codeBlock = `
-///tba
-`
+const jsBlock =
+	`button.addEventListener("click", () => {
+  displayToast("BUTTON 1");
+});
+
+button.addEventListener("click", (event) => {
+  event.stopPropagation();
+  displayToast("BUTTON 2");
+});
+
+button.addEventListener("click", () => {
+  displayToast("BUTTON 3");
+});
+
+span.addEventListener("click", () => {
+  displayToast("SPAN 1")
+})`
+
+const htlmBlock =
+	`&lt;button&gt;
+  Button
+  &lt;span&gt;Span&lt;/span&gt;
+&lt;/button&gt;`
 
 export const stopPropagationTemplate = `
 <section id="stopPropagation">
-    <h2>
-        <span>event</span>
-        <span>.</span>
-        <span>stopPropagation()</span>
-    </h2>
-    <article class="with">
-        <h3>With</h3>
-        <pre>
-            <code class="language-js">${codeBlock}</code>
-        </pre>
-        <button>
-            <span>Click</span>
-        </button>
-    </article>
-    <article class="without">
-        <h3>Without</h3>
-        <button>
-            <span>Click</span>
-        </button>
-    </article>
+  <h2>
+    <span>event</span>
+    <span>.</span>
+    <span>stopPropagation()</span>
+  </h2>
+  <article class="example example-1">
+  		<h3>Example 1</h3>
+			<div class="pre-wrapper">
+				<div class="blocks">
+					<h4>Structure</h4>
+					<pre>
+						<code class="language-html">${htlmBlock}</code>
+					</pre>
+				</div>
+				<div class="blocks">
+					<h4>Logic</h4>
+					<pre>
+						<code class="language-js">${jsBlock}</code>
+					</pre>
+				</div>
+			</div>
+			<button>
+				Button
+				<span>Span</span>
+			</button>
+  </article>
 </section>`;

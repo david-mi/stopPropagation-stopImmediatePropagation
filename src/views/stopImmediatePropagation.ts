@@ -30,7 +30,7 @@ export const stopImmediatePropagationTemplate = `
     <span>.</span>
     <span>stopImmediatePropagation()</span>
   </h2>
-  <article class="example">
+  <article class="example example-1">
   		<h3>Example 1</h3>
 			<div class="pre-wrapper">
 				<div class="blocks">
@@ -50,4 +50,5 @@ export const stopImmediatePropagationTemplate = `
 				Button
 				<span>Span</span>
 			</button>
-  </article>`;
+  </article>
+</section>`;

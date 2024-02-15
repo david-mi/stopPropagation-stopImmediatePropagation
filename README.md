@@ -1,0 +1,1 @@
+some visual examples of **event.stopPropagation** and **event.stopImmediatePropagation**
