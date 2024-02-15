@@ -48,20 +48,19 @@ h1 {
   font-weight: 800;
   line-height: 1.1;
   color: var(--clr-primary);
-  padding-block: var(--gap);
 }
 
 #stopPropagation,
 #stopImmediatePropagation {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: var(--gap) calc(var(--gap) /2);
 
   & h2 {
     background-color: var(--clr-secondary);
     width: 100%;
     font-size: clamp(1.3rem, 3vw, 1.8rem);
-    padding-block: var(--gap);
+    padding-block: calc(var(--gap) / 2);
 
     & span:nth-child(1) {
       color: white;
@@ -78,16 +77,18 @@ h1 {
 
   & article {
     --title-height: 80px;
+    --button-height: 4rem;
     background: linear-gradient(45deg, transparent 49%, #1a1a1a 49% 51%, transparent 51%), linear-gradient(-45deg, transparent 49%, #1a1a1a 49% 51%, transparent 51%);
     background-size: 1em 1em;
     background-color: #ffffff;
     position: relative;
     flex: 1;
-    padding: calc(var(--gap) / 3);
-    padding-top: calc(var(--gap) * 2);
+    padding-inline: calc(var(--gap) / 3);
+    padding-top: calc(var(--gap) / 3 + var(--title-height) / 2);
+    padding-bottom: calc(var(--gap) / 3 + var(--button-height) / 2);
     display: flex;
     flex-direction: column;
-    gap: var(--gap);
+    gap: calc(var(--gap) / 3);
     align-items: center;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     margin-top: calc(var(--title-height) / 2);
@@ -109,12 +110,36 @@ h1 {
       border-radius: 50px;
     }
 
-    & pre[class*="language-"] {
+    & h4 {
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      font-weight: 600;
+      padding: 1rem 2rem;
+      background-color: var(--clr-secondary);
+      color: white;
+    }
+
+    & .pre-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: calc(var(--gap) / 2);
+      align-self: stretch;
+    }
+
+    & .blocks {
       flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    & pre[class*="language-"] {
       border-radius: 10px;
       padding: clamp(0px, 4vw, 2rem);
       display: flex;
       justify-content: center;
+
+      .token.comment {
+        color: white
+      }
     }
 
     & button {
@@ -125,19 +150,48 @@ h1 {
       font-family: inherit;
       color: white;
       cursor: pointer;
-      transition: 300ms;
-      transform: scale(1.05);
+      transition: 300ms ease-in-out;
+      transform: scale(1.05) translateY(50%);
       margin-top: auto;
-      padding: 1rem 4rem;
+      height: var(--button-height);
+      width: 10rem;
       background-color: var(--clr-secondary);
       box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+      display: grid;
+      place-items: center;
 
       &:hover {
         background-color: var(--clr-primary);
+        border-radius: 15px;
+
+        & span {
+          background-color: var(--clr-secondary);
+        }
+      }
+
+      &:has(>span:hover) {
+        background-color: var(--clr-secondary);
+        border-radius: 8px;
       }
 
       &:active {
-        transform: scale(1);
+        transform: scale(1) translateY(50%);
+      }
+
+      & span {
+        background-color: var(--clr-primary);
+        width: 50%;
+        height: 80%;
+        display: grid;
+        place-items: center;
+        transition: 300ms ease-in-out;
+        border-radius: 5px;
+        font-size: 0.9rem;
+
+        &:hover {
+          border-radius: 10px;
+          background-color: var(--clr-primary);
+        }
       }
     }
   }

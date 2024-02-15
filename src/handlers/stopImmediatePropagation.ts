@@ -6,25 +6,30 @@ export function setImmediatePropagationHandlers() {
 }
 
 function setWithButtonHandlers() {
-  const withButton = document.querySelector<HTMLButtonElement>("#stopImmediatePropagation .with button",)!;
+  const withButton = document.querySelector<HTMLButtonElement>("#stopImmediatePropagation button",)!;
+  const withButtonSpan = withButton.querySelector("span")!
 
   withButton.addEventListener("click", () => {
-    displayToast("FIRST");
+    displayToast("BUTTON 1");
   });
 
   withButton.addEventListener("click", (event) => {
     event.stopImmediatePropagation();
-    displayToast("SECOND");
+    displayToast("BUTTON 2");
   });
 
   withButton.addEventListener("click", () => {
     // This should not be displayed
-    displayToast("THIRD");
+    displayToast("BUTTON 3");
   });
+
+  withButtonSpan.addEventListener("click", () => {
+    displayToast("SPAN 1")
+  })
 }
 
 function setWithoutButtonHandlers() {
-  const withoutButton = document.querySelector<HTMLButtonElement>("#stopImmediatePropagation .without button",)!;
+  const withoutButton = document.querySelector<HTMLButtonElement>("#stopImmediatePropagation button",)!;
 
   withoutButton.addEventListener("click", () => {
     displayToast("FIRST");

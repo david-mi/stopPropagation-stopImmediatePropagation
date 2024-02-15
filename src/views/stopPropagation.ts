@@ -14,10 +14,14 @@ export const stopPropagationTemplate = `
         <pre>
             <code class="language-js">${codeBlock}</code>
         </pre>
-        <button>Click</button>
+        <button>
+            <span>Click</span>
+        </button>
     </article>
     <article class="without">
         <h3>Without</h3>
-        <button>Click</button>
+        <button>
+            <span>Click</span>
+        </button>
     </article>
 </section>`;
